@@ -1,0 +1,33 @@
+<criterios>
+Criterio 1:
+Dado que un curso alcanza el cupo máximo de 25 estudiantes,
+Cuando intento inscribirme en ese curso estando en lista de espera,
+Entonces el sistema me registra automáticamente como estudiante con estado "en lista de espera" sin bloquear mi inscripción a otros cursos disponibles.
+
+Criterio 2:
+Dado que un curso tiene cupo disponible y hay estudiantes en lista de espera,
+Cuando se libera un cupo (por retiro o cancelación) antes del cierre de inscripción,
+Entonces el sistema inscribe automáticamente al primer estudiante de la lista de espera sin requerir acción manual.
+
+Criterio 3:
+Dado que estoy inscrito en dos cursos diferentes en el mismo periodo,
+Cuando intento inscribirme en un tercer curso disponible,
+Entonces el sistema me impide la inscripción y muestra un mensaje indicando que el límite máximo de 2 cursos por estudiante ya se ha alcanzado.
+
+Criterio 4:
+Dado que existe un curso con horarios cruzados respecto a mis cursos actuales,
+Cuando intento inscribirme en ese nuevo curso,
+Entonces el sistema me impide la inscripción y muestra un mensaje indicando que no se pueden tomar dos cursos con horarios cruzados.
+
+Criterio 5:
+Dado que mi deuda financiera está vencida,
+Cuando intento inscribirme en cualquier curso disponible,
+Entonces el sistema me impide la inscripción y muestra un mensaje indicando que los estudiantes con deuda financiera vencida no pueden registrarse.
+</criterios>
+
+Genera una tabla Markdown de casos de prueba con exactamente estas columnas:
+| Caso | Entrada | Resultado esperado | Criterio que cubre |
+
+Incluye al menos un caso por criterio y casos límite del cupo.
+
+Antes de entregar, revisa que cada criterio tenga al menos un caso; si falta alguno, agrégalo e indica cuál agregaste.

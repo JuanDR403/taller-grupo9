@@ -1,0 +1,19 @@
+Quiero convertir un pedido informal en una historia de usuario.
+
+<formato>
+Como [rol], quiero [acción], para [beneficio].
+</formato>
+
+<ejemplos>
+Pedido: Que el estudiante pueda ver en qué cursos está inscrito.            ← CAMBIAR
+Historia: Como estudiante, quiero ver los cursos en los que estoy inscrito, para conocer mi horario del periodo.   ← CAMBIAR
+
+Pedido: Que el estudiante pueda retirarse de un curso antes de que empiece.     ← CAMBIAR
+Historia: Como estudiante, quiero retirarme de un curso antes de que empiece, para liberar mi cupo si ya no puedo asistir.   ← CAMBIAR
+</ejemplos>
+
+<pedido>
+Que el estudiante quede en lista de espera si el curso está lleno.
+</pedido>
+
+Responde solo con la historia de usuario, en una línea y con el formato indicado.

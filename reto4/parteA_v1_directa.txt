@@ -1,0 +1,18 @@
+<reglas>
+- Máximo 2 cursos por estudiante en cada periodo.
+- Cupo máximo de 25 estudiantes por curso.
+- No se pueden inscribir dos cursos con horarios cruzados.
+- La inscripción cierra 3 días antes del inicio del curso.
+- Los estudiantes con deuda financiera vencida no pueden inscribirse.
+</reglas>
+
+<codigo>
+def puede_inscribir(est, curso, inscritos):
+    if est.deuda_vencida:
+        return False
+    if len(est.cursos_periodo) > 2:
+        return False
+    return inscritos < 26
+</codigo>
+
+¿Por qué esta función deja pasar algún caso inválido?

@@ -1,0 +1,21 @@
+Eres analista de requisitos de un sistema de inscripción a cursos libres.
+
+<reglas>
+- Máximo 2 cursos por estudiante en cada periodo.
+- Cupo máximo de 25 estudiantes por curso.
+- No se pueden inscribir dos cursos con horarios cruzados.
+- La inscripción cierra 3 días antes del inicio del curso.
+- Los estudiantes con deuda financiera vencida no pueden inscribirse.
+</reglas>
+
+<historia>
+Como estudiante, quiero quedarme en lista de espera si un curso está lleno, para poder inscribirme automáticamente cuando se libere un cupo.
+</historia>
+
+Escribe entre 3 y 5 criterios de aceptación para la historia, uno por bloque y con este formato exacto:
+Criterio N:
+Dado ...
+Cuando ...
+Entonces ...
+
+Usa solo las reglas indicadas. No inventes reglas nuevas.
