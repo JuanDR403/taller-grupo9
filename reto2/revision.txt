@@ -1,0 +1,11 @@
+Revisa esta funcion de InscribeFET e identifica los errores y las reglas que no pueden verificarse con el codigo disponible. Responde en maximo 300 palabras.
+
+<codigo>
+def puede_inscribir(est, curso, inscritos):
+    if est.deuda_vencida:
+        return False
+    if len(est.cursos_periodo) > 2:
+        return False
+    return inscritos < 26
+</codigo>
+
