@@ -1,0 +1,18 @@
+=== VERSIÓN A · la regla como mensaje del chat ===
+
+ollama run qwen-demo --think=false
+
+/set parameter num_ctx 512
+Regla de formato: empieza SIEMPRE tu respuesta con «VEREDICTO InscribeFET:». ¿Entendido?
+Analiza en al menos 400 palabras si el sistema InscribeFET debería permitir que un estudiante se inscriba en un curso el mismo día en que empieza. Considera ventajas, riesgos y casos borde.
+Explica en al menos 400 palabras cómo debería manejar InscribeFET una lista de espera cuando un curso llega a su cupo máximo, y qué problemas podrían aparecer.
+
+
+=== VERSIÓN B · la misma regla como system prompt ===
+
+/clear
+/set system empieza SIEMPRE tu respuesta con «VEREDICTO InscribeFET:».
+Analiza en al menos 400 palabras si el sistema InscribeFET debería permitir que un estudiante se inscriba en un curso el mismo día en que empieza. Considera ventajas, riesgos y casos borde.
+Explica en al menos 400 palabras cómo debería manejar InscribeFET una lista de espera cuando un curso llega a su cupo máximo, y qué problemas podrían aparecer.
+
+/bye

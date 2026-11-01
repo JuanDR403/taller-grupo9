@@ -1,0 +1,24 @@
+# QUÉ QUIERO
+Escribe en Python 3 una función llamada `puede_inscribir(est, curso, inscritos)` que decida si un estudiante puede inscribirse en un curso libre. Debe devolver un booleano: True si puede inscribirse y False si no.
+
+# PARA QUIÉN
+El código lo va a leer y mantener el equipo de desarrollo de InscribeFET, el sistema de inscripción a cursos libres (inglés, deportes, artes) de la Fundación Escuela Tecnológica de Neiva (FET). Son estudiantes de ingeniería de software, así que el código debe ser claro y fácil de revisar.
+
+# CONTEXTO
+Estos son los datos que recibe la función:
+- `est`: objeto con los atributos `deuda_vencida` (bool) y `cursos_periodo` (lista de cursos que el estudiante ya tiene inscritos en el periodo actual).
+- `curso`: objeto con los atributos `horario` (con hora de inicio y de fin, y día de la semana) y `fecha_inicio` (datetime).
+- `inscritos`: número entero de estudiantes ya inscritos en ese curso.
+- Cada curso de `est.cursos_periodo` también tiene el atributo `horario`.
+- La fecha y hora actual se recibe como parámetro `ahora` (datetime), para poder probar la función.
+
+Las reglas de negocio son estas y la función debe cumplirlas todas:
+1. Máximo 2 cursos por estudiante en cada periodo.
+2. Cupo máximo de 25 estudiantes por curso.
+3. No se pueden inscribir dos cursos con horarios cruzados.
+4. La inscripción cierra 3 días antes del inicio del curso.
+5. Los estudiantes con deuda financiera vencida no pueden inscribirse.
+
+
+# FORMATO DE SALIDA
+Entrega únicamente un bloque de código Python con la función, con docstring breve en español y un comentario por cada regla indicando a cuál corresponde (regla 1, regla 2, etc.). Después del bloque, agrega una sola línea que diga cuántas de las 5 reglas implementaste. No agregues explicaciones adicionales.
