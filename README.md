@@ -80,7 +80,11 @@ Los `Modelfile` están en el repositorio de la clase (`fet-diplomadoIA-prompting
 ## 7. Reflexión del grupo
 
 **¿Qué técnica tuvo más efecto en nuestro caso?**
-Las restricciones explícitas dentro de un bloque delimitado. En el reto 3, una sola corrección en el primer prompt eliminó la inscripción automática inventada y, con ella, todo lo que se había propagado a los criterios y a los casos de prueba. Corregir en el origen resultó más eficaz que arreglar cada salida posterior. [Completar con la técnica que más pesó en los retos 1, 2 y 4B, y con lo que el grupo decida.]
+Las reglas de negocio explícitas dentro de un bloque delimitado fueron la técnica que más pesó en InscribeFET.
+
+- **Reto 1.** Con el prompt original, el modelo inventó un colegio, reglas de edad y dos lenguajes, y cumplió 0 de las 5 reglas porque nunca las recibió. Con el prompt estructurado (cinco bloques y las reglas dentro de `<reglas>…</reglas>`) implementó correctamente 4 de las 5. Al quitar solo el bloque de restricciones, ese resultado no cambió: lo que marcó la diferencia fue el contexto con las reglas, y las restricciones aportaron sobre todo transparencia (el uso de `# SUPUESTO:`).
+- **Reto 3.** Una sola corrección en el primer prompt eliminó la inscripción automática inventada y, con ella, todo lo que se había propagado a los criterios y a los casos de prueba. Corregir en el origen resultó más eficaz que arreglar cada salida posterior.
+- **Reto 4 (parte B).** Con una ventana de 512 tokens, la regla de formato dada como mensaje del chat se perdió en la segunda respuesta, mientras que como system prompt se mantuvo en las dos. Una instrucción que debe cumplirse siempre tiene que estar en un lugar que sobreviva al recorte del contexto.
 
 **Si mañana tuviéramos que pedirle a una herramienta de IA que programe una funcionalidad de nuestro sistema, ¿qué haríamos distinto?**
 - Le daríamos las reglas de negocio dentro de un bloque delimitado, porque el modelo no las conoce.
